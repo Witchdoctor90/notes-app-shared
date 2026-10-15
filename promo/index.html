@@ -85,17 +85,17 @@ body.render #ui,body.render #bar{display:none}
  <!-- S4 select all -->
  <div class="sc" id="s4">
   <div class="col"><div class="f h2" id="s4t"></div><div class="f sub" id="s4s"></div></div>
-  <div class="a cardui" id="s4c" style="left:1010px;top:150px;width:760px;height:780px;padding:46px 48px;overflow:hidden">
-   <div style="font-weight:800;font-size:54px;letter-spacing:-1.4px">Рим · Rome</div>
-   <div style="margin-top:22px;font-size:32px;color:#c8cad2;line-height:1.5">Квитки, готель, маршрут на три дні.<br>Tickets, hotel, a three-day route.</div>
+  <div class="a cardui" id="s4c" style="left:1010px;top:200px;width:760px;height:660px;padding:46px 48px;overflow:hidden">
+   <div style="font-weight:800;font-size:54px;letter-spacing:-1.4px" id="s4a"></div>
+   <div style="margin-top:22px;font-size:32px;color:#c8cad2;line-height:1.5" id="s4b"></div>
    <div style="margin-top:26px;height:190px;border-radius:26px;background:linear-gradient(120deg,#5e6ad2,#a06bff 60%,#ffd989)"></div>
    <div style="margin-top:26px;border:2px solid var(--line);border-radius:20px;overflow:hidden;font-size:30px;color:#c8cad2">
-    <div style="display:flex;border-bottom:2px solid var(--line)"><div style="flex:1;padding:16px 22px;border-right:2px solid var(--line)">Day 1</div><div style="flex:1;padding:16px 22px">Colosseum</div></div>
-    <div style="display:flex"><div style="flex:1;padding:16px 22px;border-right:2px solid var(--line)">Day 2</div><div style="flex:1;padding:16px 22px">Vatican</div></div>
+    <div style="display:flex;border-bottom:2px solid var(--line)"><div style="flex:1;padding:16px 22px;border-right:2px solid var(--line)" id="s4d1"></div><div style="flex:1;padding:16px 22px" id="s4v1"></div></div>
+    <div style="display:flex"><div style="flex:1;padding:16px 22px;border-right:2px solid var(--line)" id="s4d2"></div><div style="flex:1;padding:16px 22px" id="s4v2"></div></div>
    </div>
    <div class="a" id="s4h" style="inset:0;background:rgba(94,106,210,.34);border:3px solid rgba(139,147,232,.8);border-radius:44px;transform-origin:0 0"></div>
   </div>
-  <div class="a cardui" id="s4m" style="left:1060px;top:80px;width:660px;height:96px;border-radius:999px;display:flex;align-items:center;justify-content:space-around;font-size:30px;font-weight:600;color:#e6e8ff;background:#22242d"></div>
+  <div class="a cardui" id="s4m" style="left:1060px;top:130px;width:660px;height:96px;border-radius:999px;display:flex;align-items:center;justify-content:space-around;font-size:30px;font-weight:600;color:#e6e8ff;background:#22242d"></div>
  </div>
 
  <!-- S5 math -->
@@ -157,7 +157,7 @@ const T={
  uk:{name:'Shadovv Notes',h:['Нотатки,','що не','гальмують.'],hs:'Швидкий і приватний застосунок для Android',
   s2t:'Пишіть без зайвого',s2s:'Заголовки, списки й цитати в одному потоці',chips:['Заголовок','Список','Чекліст','Цитата'],n1:'Поїздка до Риму',n2:['Квитки','Готель біля Колізею'],n3:'Забронювати екскурсію',n4:'Подорож починається з нотатки',
   s3t:'Чеклісти, що самі наводять лад',s3s:'Виконане опускається вниз',s3h:'План на тиждень',rows:['Зібрати збірку','Перевірити експорт','Записати відео'],
-  s4t:'Виділити все — справді все',s4s:'Разом із фото, таблицями й картками',menu:['Вирізати','Копіювати','Вставити','Усе'],
+  s4t:'Виділити все — справді все',s4s:'Разом із фото, таблицями й картками',c4:['Рим','Квитки, готель, маршрут на три дні.','День 1','Колізей','День 2','Ватикан'],menu:['Вирізати','Копіювати','Вставити','Усе'],
   s5t:'Математичні нотатки',s5s:'Рядок із «=» одразу дає результат',m1:'2 × 48 =',m2:'12,5 + 7,5 =',
   s6t:'Папки й розумні папки',s6s:'Умови самі збирають нотатки',
   s7t:'Швидка нотатка в один дотик',s7s:'Віджет 1×1 на головному екрані',qt:'Швидка нотатка',qx:'Купити каву',qb:'Зберегти',
@@ -165,7 +165,7 @@ const T={
  en:{name:'Shadovv Notes',h:['Notes','that never','slow you down.'],hs:'A fast, private notes app for Android',
   s2t:'Write, nothing extra',s2s:'Headings, lists and quotes in one flow',chips:['Heading','List','Checklist','Quote'],n1:'Trip to Rome',n2:['Tickets','Hotel near the Colosseum'],n3:'Book the tour',n4:'A trip starts with a note',
   s3t:'Checklists that tidy themselves',s3s:'Finished items sink to the bottom',s3h:'Plan for the week',rows:['Build the release','Check the export','Record the video'],
-  s4t:'Select all means all',s4s:'Photos, tables and cards included',menu:['Cut','Copy','Paste','All'],
+  s4t:'Select all means all',s4s:'Photos, tables and cards included',c4:['Rome','Tickets, hotel, a three-day route.','Day 1','Colosseum','Day 2','Vatican'],menu:['Cut','Copy','Paste','All'],
   s5t:'Math notes',s5s:'A line ending in “=” shows its result',m1:'2 × 48 =',m2:'12.5 + 7.5 =',
   s6t:'Folders & smart folders',s6s:'Rules gather notes for you',
   s7t:'Quick note in one tap',s7s:'A 1×1 widget on your home screen',qt:'Quick note',qx:'Buy coffee',qb:'Save',
@@ -218,6 +218,7 @@ tw('s3r2',15.5,.7,{y:0},{y:ROW},'io');tw('s3r3',15.5,.7,{y:ROW},{y:0},'io');
 $('s4t').textContent=T.s4t;$('s4s').textContent=T.s4s;rise('s4t',16,90,1);rise('s4s',16.5,50,.9);
 tw('s4c',16,1.1,{y:300,o:0,s:.94,b:10},{y:0,o:1,s:1,b:0});
 tw('s4h',17.5,1.5,{sx:0,o:1},{sx:1,o:1},'io');
+$('s4a').textContent=T.c4[0];$('s4b').textContent=T.c4[1];$('s4d1').textContent=T.c4[2];$('s4v1').textContent=T.c4[3];$('s4d2').textContent=T.c4[4];$('s4v2').textContent=T.c4[5];
 T.menu.forEach(m=>{const s=document.createElement('span');s.textContent=m;$('s4m').appendChild(s)});
 tw('s4m',18.5,.7,{y:-30,o:0,s:.8},{y:0,o:1,s:1},'back');
 // S5
