@@ -3,11 +3,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Shadovv Notes</title>
-<meta name="description" content="Shadovv Notes — a fast, private notes app for Android. Coming soon to Google Play.">
+<meta name="description" content="Shadovv Notes — a fast, private notes app for Android. Closed testing on Google Play.">
 <meta name="theme-color" content="#0c0d0f">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shadovv Notes">
-<meta property="og:description" content="A fast, private notes app for Android. Coming soon to Google Play.">
+<meta property="og:description" content="A fast, private notes app for Android. Closed testing on Google Play.">
 <meta property="og:image" content="https://witchdoctor90.github.io/notes-app-shared/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
@@ -45,9 +45,10 @@ h1{margin:22px 0 18px;font-weight:800;font-size:clamp(42px,6.4vw,76px);line-heig
 h1 em{font-style:normal;background:linear-gradient(100deg,#8b93e8,#b4baf2 55%,#e2b340);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:30em;margin:0 0 30px}
 .cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
-.play{display:inline-flex;align-items:center;gap:12px;font:600 16px Inter,sans-serif;color:#fff;background:var(--accent);border:0;border-radius:14px;padding:15px 24px;opacity:.55;cursor:not-allowed;box-shadow:0 12px 32px rgba(94,106,210,.35)}
+.play{display:inline-flex;align-items:center;gap:12px;font:600 16px Inter,sans-serif;color:#fff;background:var(--accent);border:0;border-radius:14px;padding:15px 24px;cursor:pointer;text-decoration:none;transition:filter .15s,transform .15s;box-shadow:0 12px 32px rgba(94,106,210,.35)}
+.play:hover{filter:brightness(1.12);transform:translateY(-1px)}
 .play svg{width:20px;height:20px}
-.soon{color:var(--dim);font-size:15px;margin:0}
+.soon{color:var(--dim);font-size:15px;margin:0}.soon a{color:var(--accent-t)}
 .ghost{font-weight:500;font-size:15px}
 .trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;padding:0;list-style:none;color:var(--muted);font-size:14.5px}
 .trust li:before{content:"✓";color:var(--ok);margin-right:8px;font-weight:700}
@@ -113,15 +114,15 @@ html.js .reveal.in.card:hover{transform:translateY(-4px)}
 <main>
 <div class="wrap hero">
   <div>
-    <span class="pill"><i></i><span data-l="uk">Скоро в Google Play</span><span data-l="en">Coming soon to Google Play</span></span>
+    <span class="pill"><i></i><span data-l="uk">Закрите тестування в Google Play</span><span data-l="en">Closed testing on Google Play</span></span>
     <h1><span data-l="uk">Нотатки, що <em>не гальмують</em>.</span><span data-l="en">Notes that <em>never slow you down</em>.</span></h1>
     <p class="lead"><span data-l="uk">Швидкий і приватний застосунок для нотаток на Android: пишіть, малюйте, рахуйте й складайте все в папки — одним плавним потоком.</span><span data-l="en">A fast, private notes app for Android: write, draw, calculate and file everything away — in one smooth flow.</span></p>
     <div class="cta">
-      <button class="play" type="button" disabled aria-disabled="true" aria-describedby="soon">
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.shadovvdev.shadovvnotes" target="_blank" rel="noopener" aria-describedby="soon">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.2v17.6c0 .5.5.8 1 .5l14-8.8c.4-.3.4-.8 0-1.1L6 2.7c-.5-.3-1 0-1 .5z"/></svg>
         <span data-l="uk">Завантажити з Google Play</span><span data-l="en">Get it on Google Play</span>
-      </button>
-      <p class="soon" id="soon"><span data-l="uk">Скоро буде опубліковано.</span><span data-l="en">Coming soon: not published yet.</span></p>
+      </a>
+      <p class="soon" id="soon"><span data-l="uk">Закрите тестування: доступ за запрошенням. <a href="#access">Запросити доступ</a></span><span data-l="en">Closed testing: access by invitation. <a href="#access">Request access</a></span></p>
     </div>
     <ul class="trust">
       <li><span data-l="uk">Без реклами</span><span data-l="en">No ads</span></li><li><span data-l="uk">Без акаунту</span><span data-l="en">No account</span></li><li><span data-l="uk">Усе на вашому пристрої</span><span data-l="en">Everything on your device</span></li>
@@ -179,11 +180,11 @@ html.js .reveal.in.card:hover{transform:translateY(-4px)}
   </div>
 </div></section>
 
-<section class="end"><div class="wrap">
+<section class="end" id="access"><div class="wrap">
   <div class="eyebrow">Shadovv Notes</div>
-  <h2><span data-l="uk">Скоро в Google Play</span><span data-l="en">Coming soon to Google Play</span></h2>
-  <p class="sub"><span data-l="uk">Ми завершуємо останні перевірки. Питання чи побажання? Напишіть нам.</span><span data-l="en">We are finishing the last checks. Questions or ideas? Write to us.</span></p>
-  <div class="cta"><a class="play" style="opacity:1;cursor:pointer;text-decoration:none" href="mailto:mrvnalexandr@gmail.com"><span data-l="uk">Написати розробнику</span><span data-l="en">Contact the developer</span></a><a class="ghost" href="privacy/"><span data-l="uk">Політика конфіденційності</span><span data-l="en">Privacy Policy</span></a></div>
+  <h2><span data-l="uk">Закрите тестування</span><span data-l="en">Closed testing</span></h2>
+  <p class="sub"><span data-l="uk">Shadovv Notes зараз у закритому тестуванні в Google Play. Щоб долучитися, напишіть нам зі своєю адресою Gmail, і ми додамо вас до тестувальників.</span><span data-l="en">Shadovv Notes is currently in closed testing on Google Play. To join, email us the Gmail address you use in Google Play and we will add you to the testers.</span></p>
+  <div class="cta"><a class="play" id="access-btn" href="mailto:mrvnalexandr@gmail.com"><span data-l="uk">Запросити доступ</span><span data-l="en">Request access</span></a><a class="ghost" href="privacy/"><span data-l="uk">Політика конфіденційності</span><span data-l="en">Privacy Policy</span></a></div>
 </div></section>
 </main>
 
@@ -209,9 +210,10 @@ var btns=D.querySelectorAll('.lang button');
 function guess(){var q=/[?&]lang=(en|uk)/.exec(location.search),s=null;try{s=localStorage.getItem('lang')}catch(e){}
  if(q)return q[1];if(s==='uk'||s==='en')return s;return /^(uk|ru|be)/i.test(navigator.language||'')?'uk':'en'}
 var onLang=[];
+function accessLink(l){var a=document.getElementById('access-btn');if(!a)return;var s=l==='uk'?'Shadovv Notes: запит доступу до закритого тестування':'Shadovv Notes: closed testing access request',b=l==='uk'?'Доброго дня! Прошу надати доступ до закритого тестування Shadovv Notes.\n\nАдреса Gmail, яку я використовую в Google Play: ':'Hello! I would like to request access to the closed test of Shadovv Notes.\n\nThe Gmail address I use in Google Play: ';a.href='mailto:mrvnalexandr@gmail.com?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)}
 function setLang(l){h.lang=l;D.title=l==='uk'?'Shadovv Notes — нотатки без гальм':'Shadovv Notes — notes that never slow you down';
  btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false')});
- try{localStorage.setItem('lang',l)}catch(e){} onLang.forEach(function(f){f(l)})}
+ try{localStorage.setItem('lang',l)}catch(e){} onLang.forEach(function(f){f(l)});accessLink(l)}
 btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set)})});
 
 /* ---------- reveal + card spotlight ---------- */
